@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 883
     width: 609
     height: 424
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 117
+  controlID: 118
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 116
+  controlID: 117
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -492,9 +492,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 287a0000
-    m_LastClickedID: 31272
-    m_ExpandedIDs: 00000000147a000000ca9a3b
+    m_SelectedIDs: 505f0000
+    m_LastClickedID: 24400
+    m_ExpandedIDs: 000000004a5f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000147a0000
+    m_ExpandedIDs: 000000004a5f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d059000062cd000000000000ba920000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -617,23 +617,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 70ddfbffceddfbff68dffbff3621fdff169ffdffceaffdffb2c5fdff8ad0fdffd8d0fdff2cd1fdff9ad1fdfff0d3fdffcc7cfeff3090feff3ebafeff4ecbfeff001affffc01bffff443affffae48ffff3a51ffffac790000c2790000
+      m_SelectedIDs: a25d0000
+      m_LastClickedID: 23970
+      m_ExpandedIDs: 24fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: btn_Next
-        m_OriginalName: btn_Next
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -163786
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 
@@ -959,10 +959,10 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
-      index: 10
+      index: 8
       layout: 4
-      size: {x: 0, y: 0}
-      sizeOverridden: 0
+      size: {x: 240, y: 135}
+      sizeOverridden: 1
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.013499565, y: 0.000000019704693, z: -0.000000014746012, w: 0.99990875}
     speed: 2
-    m_Value: {x: 0.013499568, y: 0.000000019704697, z: -0.000000014746015, w: 0.9999089}
+    m_Value: {x: -0.013499565, y: -0.000000019704693, z: 0.000000014746012, w: -0.99990875}
   m_Size:
     m_Target: 642.1677
     speed: 2

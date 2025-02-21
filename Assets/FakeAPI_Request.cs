@@ -6,13 +6,14 @@ using TMPro;
 
 public class APIManager : MonoBehaviour
 {
+    //Pal User
     [SerializeField] private string APIurl = "https://my-json-server.typicode.com/JuanJAreiza/jsonDB/users";
     [SerializeField] private TMP_Text usernameText;
     [SerializeField] private TMP_Text skillText;
     [SerializeField] private TMP_Text stateText;
     [SerializeField] private RawImage[] cardImages;
     [SerializeField] private TMP_Text[] cardNumbers;
-    [SerializeField] private TMP_Text[] cardNames; // 🔹 NUEVO: Texto para los nombres de los Pokémon
+    [SerializeField] private TMP_Text[] cardNames;
     [SerializeField] private Color activeColor = Color.green;
     [SerializeField] private Color inactiveColor = Color.gray;
 
@@ -31,7 +32,7 @@ public class APIManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error en la solicitud: " + request.error);
+            Debug.LogError("Error User: " + request.error);
         }
         else
         {
@@ -41,22 +42,22 @@ public class APIManager : MonoBehaviour
 
             skillText.text = "Nivel: " + user.skill;
 
-            string stateWord = user.state ? "<color=#006400>Activo</color>" : "<color=#404040>Inactivo</color>";
+            string stateWord = user.state ? "<color=#006400>Activo</color>" : "<color=#404040>Inactivo</color>"; //Para mas precisión del color
             stateText.text = $"Estado: {stateWord}";
 
             for (int i = 0; i < cardNumbers.Length; i++)
             {
                 if (i < user.deck.Length)
                 {
-                    int cardId = user.deck[i]; // ID de la carta (Pokédex)
+                    int cardId = user.deck[i];
                     cardNumbers[i].text = cardId.ToString();
-                    StartCoroutine(GetPokemonData(cardId, cardImages[i], cardNames[i])); // 🔹 Ahora también obtenemos el nombre
+                    StartCoroutine(GetPokemonData(cardId, cardImages[i], cardNames[i]));
                 }
                 else
                 {
                     cardNumbers[i].text = "";
                     cardImages[i].color = Color.clear;
-                    cardNames[i].text = ""; // 🔹 Si no hay carta, también limpiamos el nombre
+                    cardNames[i].text = "";
                 }
             }
         }
@@ -70,17 +71,14 @@ public class APIManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error al obtener datos del Pokémon ID " + id + ": " + request.error);
+            Debug.LogError("Error con datos del Pokémon ID " + id + ": " + request.error);
         }
         else
         {
-            // 🔹 Extraemos la info de la API de Pokémon
             PokemonData pokemon = JsonUtility.FromJson<PokemonData>(request.downloadHandler.text);
 
-            // 🔹 Asignamos el nombre con la primera letra en mayúscula
             nameText.text = char.ToUpper(pokemon.name[0]) + pokemon.name.Substring(1);
 
-            // 🔹 Cargamos la imagen
             StartCoroutine(GetPokemonImage(id, image));
         }
     }
@@ -93,7 +91,7 @@ public class APIManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error al cargar imagen de Pokémon ID " + id + ": " + request.error);
+            Debug.LogError("Error con imagen " + id + ": " + request.error);
         }
         else
         {
@@ -103,7 +101,6 @@ public class APIManager : MonoBehaviour
     }
 }
 
-// 🔹 Clase para extraer el nombre del Pokémon de la API
 [System.Serializable]
 public class PokemonData
 {
