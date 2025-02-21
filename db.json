@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "id":1,
+            "username": "Sofia",
+            "state":true,
+            "skill": "Experto",
+            "deck":[2,5,9,24,36]
+        },
+        {
+            "id":2,
+            "username": "Gabriel",
+            "state":true,
+            "skill": "Aficionado",
+            "deck":[12,15,23,25,30]
+        },
+        {
+            "id":3,
+            "username": "Miguel",
+            "state":false,
+            "skill": "Intermedio",
+            "deck":[13,18,20,21,24]
+        }
+    ]
+}
