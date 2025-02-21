@@ -1,2 +1,2 @@
-# jsonDB
-Entrega de Actividad 2. Sistemas Interactivos Distribuidos.
+# Entrega 2.
+Entrega por: Juan José Areiza Orrego
